@@ -1,0 +1,125 @@
+/* ------------------ GENERAL BODY & HEADINGS ------------------ */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+h2, h4, h5 {
+    color: #2c3e50;
+}
+
+/* ------------------ CARDS ------------------ */
+.card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* ------------------ BUTTONS ------------------ */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* ------------------ TABLE STYLING ------------------ */
+.table {
+    background-color: white;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table th, .table td {
+    padding: 10px 15px;
+    text-align: center;  /* Center content */
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+/* ------------------ MANUAL ENTRY FORM ------------------ */
+.student-entry input {
+    border: none;                  /* Remove all borders */
+    border-bottom: 2px solid black; /* Add only bottom border */
+    width: 500px;
+    margin-bottom: 8px;
+    outline: none;                 /* Optional: removes blue highlight on focus */
+    background: transparent;       /* Optional: remove background color */
+}
+
+
+
+.student-entry input:focus {
+    border-bottom: 2px solid rgb(37, 43, 160);
+}
+
+
+
+#student-container .student-entry {
+    border-bottom: 5px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* ------------------ DYNAMIC BUTTONS ------------------ */
+#add-student {
+    margin-bottom: 15px;
+    width: 500px;
+   
+
+}
+
+/* ------------------ CHART IMAGE ------------------ */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------ FORM & SPACING ------------------ */
+form {
+    margin-top: 10px;
+}
+
+.text-center p {
+    margin: 5px 0;
+}
+
+a.btn-secondary {
+    margin-top: 20px;
+}
+
+/* ------------------ RESPONSIVE ADJUSTMENTS ------------------ */
+@media (max-width: 576px) {
+    .student-entry input {
+        width: 100%;
+    }
+    #add-student {
+        width: 100%;
+    }
+    .btn-success, .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}

@@ -1,0 +1,53 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Student Result Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+
+
+
+
+
+
+<div class="container text-center mt-5">
+    <h2 class="mb-4">📊 Student Result Analysis Dashboard</h2>
+
+    <!-- CSV Upload Form -->
+    <form action="{{ url_for('result') }}" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm mb-4">
+        <div class="mb-3">
+            <input type="file" name="file" class="form-control" accept=".csv">
+        </div>
+        <p class="text-muted">Or upload a CSV file with columns: Name, Subject1, Subject2, ...</p>
+        <button type="submit" class="btn btn-primary w-100">Upload & Analyze</button>
+    </form>
+
+    <!-- Manual Entry Form -->
+    <form action="{{ url_for('manual_result') }}" method="POST" class="card p-4 shadow-sm">
+        <h5 class="mb-3">Enter Student Marks Manually</h5>
+        <div id="student-container">
+            <div class="student-entry mb-2">
+                <input type="text" name="name[]" placeholder="Name" required class="form-control mb-1"><br>
+                <input type="number" name="math[]" placeholder="Math" required class="form-control mb-1"><br>
+                <input type="number" name="science[]" placeholder="Science" required class="form-control mb-1"><br>
+                <input type="number" name="english[]" placeholder="English" required class="form-control mb-1"><br>
+                <input type="number" name="physics[]" placeholder="Physics" required class="form-control mb-1"><br>
+                <input type="number" name="chemistry[]" placeholder="Chemistry" required class="form-control mb-1"><br>
+                <input type="number" name="biology[]" placeholder="Biology" required class="form-control mb-1"><br>
+            </div>
+        </div>
+        <center><button type="button" id="add-student" class="btn btn-secondary mb-2">+ Add Another Student</button>
+        <button type="submit" class="btn btn-success w-100">Analyze Manual Entry</button></center>
+    </form>
+</div>
+</head>
+<script>
+    // Add more student input fields dynamically
+    document.getElementById('add-student').addEventListener('click', function() {
+        const container = document.getElementById('student-container');
+        const entry = document.querySelector('.student-entry').cloneNode(true);
+        entry.querySelectorAll('input').forEach(input => input.value = '');
+        container.appendChild(entry);
+    });
+</script>
