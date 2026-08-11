@@ -31,7 +31,6 @@ This is a **Flask-based web application** that allows users to upload a CSV file
 - Matplotlib
 - ReportLab
 - HTML / CSS
-- Bootstrap *(optional if used)*
 
 ---
 
@@ -46,9 +45,6 @@ student_result_dashboard/
 │── uploads/
 │── requirements.txt
 │── README.md
-
-yaml
-Copy code
 
 ---
 
